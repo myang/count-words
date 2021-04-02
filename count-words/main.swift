@@ -25,7 +25,7 @@ for word in words {
         let len = word.firstIndex(of: "'")!
         key = String(word.prefix(upTo: len))
     }*/
-    wordCount[key] = (wordCount[key] ?? 0) + 1
+    wordCount[key, default: 0] += 1
 }
 
 for (key, value) in wordCount {
